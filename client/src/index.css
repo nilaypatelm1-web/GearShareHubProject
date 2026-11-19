@@ -1,0 +1,476 @@
+:root {
+  --navy: #0a1128;
+  --navy-mid: #0f1b3d;
+  --navy-light: #142650;
+  --accent: #2f8fff;
+  --accent-dark: #1c6fe0;
+  --accent-light: #6db3ff;
+  --text-light: #f3f6fb;
+  --text-muted-light: #aab4c8;
+  --bg-page: #f4f6fa;
+  --text-dark: #1b2436;
+  --text-muted-dark: #6b7488;
+  --radius: 14px;
+}
+
+* {
+  font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-dark);
+}
+
+/* ---------- Navbar ---------- */
+.app-navbar {
+  background: var(--navy) !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+}
+.app-navbar .navbar-brand {
+  font-weight: 700;
+  font-size: 1.35rem;
+  letter-spacing: -0.3px;
+}
+.app-navbar .brand-accent {
+  color: var(--accent-light);
+}
+.brand-accent {
+  color: var(--accent-light);
+}
+.brand-accent-dark {
+  color: var(--accent-dark);
+}
+.app-navbar .nav-link {
+  color: var(--text-muted-light) !important;
+  font-weight: 500;
+  margin: 0 0.35rem;
+  transition: color 0.15s ease;
+}
+.app-navbar .nav-link:hover,
+.app-navbar .nav-link.active {
+  color: #ffffff !important;
+}
+
+/* ---------- Buttons ---------- */
+.btn-accent {
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn-accent:hover {
+  background: linear-gradient(135deg, var(--accent-light), var(--accent));
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(47, 143, 255, 0.35);
+}
+
+/* ---------- Hero (Home page) ---------- */
+.hero-section {
+  background: radial-gradient(circle at top right, var(--navy-light), var(--navy) 70%);
+  color: var(--text-light);
+  padding: 4.5rem 0 4rem;
+}
+.hero-eyebrow {
+  color: var(--accent-light);
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+.hero-section h1 {
+  font-weight: 800;
+  font-size: 2.75rem;
+}
+.hero-section p.lead {
+  color: var(--text-muted-light);
+}
+.hero-search .form-control {
+  border-radius: 50px 0 0 50px;
+  border: none;
+  padding: 0.75rem 1.25rem;
+}
+.hero-search .btn {
+  border-radius: 0 50px 50px 0;
+  padding: 0.75rem 1.5rem;
+}
+
+/* ---------- Category cards ---------- */
+.category-card {
+  border: none;
+  border-radius: var(--radius);
+  text-align: center;
+  padding: 1.5rem 1rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  background: #fff;
+  text-decoration: none;
+  color: var(--text-dark);
+  display: block;
+}
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(10, 17, 40, 0.1);
+  color: var(--accent-dark);
+}
+.category-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- How it works ---------- */
+.how-it-works {
+  background: var(--navy);
+  color: var(--text-light);
+  padding: 4rem 0;
+}
+.step-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--navy-light);
+  border: 2px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--accent-light);
+  margin: 0 auto 0.75rem;
+}
+
+/* ---------- Generic hover card (gear cards etc.) ---------- */
+
+.hover-card {
+  border: none;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--navy);
+  color: var(--text-light);
+  box-shadow: 0 6px 20px rgba(10, 17, 40, 0.15);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 28px rgba(10, 17, 40, 0.12);
+}
+
+.hover-card .card-title {
+  color: var(--text-light);
+  font-weight: 700;
+}
+
+.hover-card .card-subtitle {
+  color: var(--text-muted-light) !important;
+}
+
+.hover-card .card-text {
+  color: var(--text-muted-light);
+}
+
+.hover-card strong {
+  color: var(--accent-light);
+}
+
+/* ---------- Auth cards (Login/Register) ---------- */
+.auth-card {
+  border: none;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(10, 17, 40, 0.08);
+}
+
+/* ---------- Add/Edit Gear split layout ---------- */
+.gear-form-panel {
+  background: linear-gradient(160deg, var(--navy-light), var(--navy));
+  color: var(--text-light);
+  border-radius: var(--radius);
+  padding: 2rem;
+  height: 100%;
+}
+.gear-form-panel .feature-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+.gear-form-panel .feature-icon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: rgba(47, 143, 255, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+.gear-form-card {
+  border: none;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(10, 17, 40, 0.08);
+}
+.upload-dropzone {
+  border: 2px dashed #c9d2e0;
+  border-radius: 10px;
+  padding: 1.25rem;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.upload-dropzone:hover {
+  border-color: var(--accent);
+  background: rgba(47, 143, 255, 0.05);
+}
+
+/* ---------- Footer ---------- */
+.app-footer {
+  background: var(--navy);
+  color: var(--text-muted-light);
+  padding: 2.5rem 0 1.5rem;
+  margin-top: 4rem;
+}
+.app-footer a {
+  color: var(--text-muted-light);
+  text-decoration: none;
+  margin-right: 1.25rem;
+}
+.app-footer a:hover {
+  color: #fff;
+}
+
+.section-description {
+  color: var(--text-muted-light);
+}
+
+
+/* ---------- Pre-booking calendar (react-datepicker) ---------- */
+.react-datepicker-wrapper {
+  display: block;
+  width: 100%;
+}
+.react-datepicker-popper {
+  z-index: 2000; /* above the Bootstrap modal */
+}
+.react-datepicker__day.booked-day {
+  background: #f8d7da;
+  color: #842029;
+  border-radius: 0.3rem;
+}
+.booked-list li {
+  font-size: 0.85rem;
+  color: var(--text-muted-dark);
+}
+
+
+/* ---------- Notification bell (Navbar) ---------- */
+.bell-toggle {
+  position: relative;
+  background: transparent;
+  border: none;
+  padding: 0.25rem 0.5rem;
+  color: #fff;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+.bell-toggle::after {
+  display: none; /* hide the default dropdown arrow */
+}
+.bell-badge {
+  position: absolute;
+  top: -4px;
+  right: -2px;
+  font-size: 0.65rem;
+}
+.bell-menu {
+  width: 340px;
+  max-width: 90vw;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(10, 17, 40, 0.25);
+  overflow: hidden;
+}
+.bell-list {
+  max-height: 360px;
+  overflow-y: auto;
+}
+.bell-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: #fff;
+  border: none;
+  border-bottom: 1px solid #eef1f6;
+  padding: 0.65rem 1rem;
+  color: var(--text-dark);
+}
+.bell-item:hover {
+  background: #f4f6fa;
+}
+.bell-item.unread {
+  background: rgba(47, 143, 255, 0.1);
+  border-left: 3px solid var(--accent);
+}
+.bell-message {
+  font-size: 0.85rem;
+  white-space: normal;
+}
+.bell-time {
+  font-size: 0.72rem;
+  color: var(--text-muted-dark);
+  margin-top: 2px;
+}
+
+/* ---------- Return confirmation / late fee ---------- */
+.return-request-box {
+  border: 2px solid var(--accent);
+  background: rgba(47, 143, 255, 0.1);
+  border-radius: 10px;
+}
+.late-fee {
+  color: #dc3545;
+  font-weight: 600;
+}
+
+/* ---------- Pagination (Browse Gears) ---------- */
+.pagination .page-link {
+  color: var(--accent-dark);
+}
+.pagination .page-item.active .page-link {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+/* ---------- Danger zone (Delete my account) ---------- */
+.hover-card.danger-zone {
+  border: 2px solid #dc3545;
+}
+.hover-card.danger-zone .card-title {
+  color: #ff6b7a;
+}
+
+/* ---------- Wishlist heart button ---------- */
+.wish-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 2;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--text-muted-dark);
+  font-size: 1.3rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(10, 17, 40, 0.25);
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+.wish-btn:hover {
+  transform: scale(1.12);
+}
+.wish-btn.saved {
+  color: #e63946;
+}
+/* next to a title (gear detail page) instead of floating on an image */
+.wish-btn.wish-inline {
+  position: static;
+  flex-shrink: 0;
+  border: 1px solid #d5dae6;
+  box-shadow: none;
+}
+
+/* ---------- Gear detail: thumbnails ---------- */
+.gear-thumbs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 10px;
+  background: var(--navy-mid);
+}
+.gear-thumb {
+  width: 64px;
+  height: 64px;
+  padding: 2px;
+  background: white;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.gear-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.gear-thumb.active {
+  border-color: var(--accent);
+}
+
+/* ---------- Add / Edit gear: image previews ---------- */
+.image-preview-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.image-preview-item {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.image-preview-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.image-remove-btn {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 22px;
+  height: 22px;
+  border: none;
+  border-radius: 50%;
+  background: #dc3545;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.image-cover-tag {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(10, 17, 40, 0.75);
+  color: #fff;
+  font-size: 0.65rem;
+  text-align: center;
+}
+
+/* ---------- Owner public profile ---------- */
+.owner-avatar {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
